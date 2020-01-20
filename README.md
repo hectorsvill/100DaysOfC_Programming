@@ -2,17 +2,17 @@
  some C Programing a day keeps the doctor away 😁
 #
 
-#### Day 1
+#### Day 1 - intro to embeded systems
  - Setup enviroment for learning embeded systems with arduino, esp8266, raspberry pi
 
-
+- setup
 ```bash
 brew install avrdude
 brew tap osx-cross/avr
 brew install avr-gcc
 ```
 
-compile and run
+- to compile and write hex to arduino 
 ```bash
 avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o intro.o intro.c
 avr-gcc -mmcu=atmega328p intro.o -o intro
