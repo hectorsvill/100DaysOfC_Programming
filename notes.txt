@@ -1,0 +1,42 @@
+// #ifndef F_CPU
+// #define F_CPU 16000000UL // or whatever may be your frequency
+// #endif
+ 
+ 
+// #include <avr/io.h>
+// #include <util/delay.h>                // for _delay_ms()
+ 
+// int main(void)
+// {
+//     DDRC = 0x01;                       // initialize port C
+//     while(1)
+//     {
+//         // LED on
+//         PORTC = 0b00000001;            // PC0 = High = Vcc
+//         _delay_ms(500);                // wait 500 milliseconds
+ 
+//         //LED off
+//         PORTC = 0b00000000;            // PC0 = Low = 0v
+//         _delay_ms(500);                // wait 500 milliseconds
+//     }
+// }
+
+
+// install avr: 
+// brew install avrdude
+// brew tap osx-cross/avr
+// brew install avr-gcc
+
+
+// avr-gcc -g -Os -mmcu=atmega32 -c intro.c
+// avr-gcc -g -mmcu=atmega32 -o intro.elf intro.o
+// // create to hex
+// avr-objcopy -j .text -j .data -O ihex intro.elf intro.hex
+
+
+/*
+avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o intro.o intro.c
+avr-gcc -mmcu=atmega328p intro.o -o intro
+avr-objcopy -O ihex -R .eeprom intro intro.hex
+avrdude -F -V -c arduino -p ATMEGA328P -P /dev/cu.usbmodem141101 -b 115200 -U flash:w:intro.hex
+*/

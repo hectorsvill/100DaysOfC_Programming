@@ -35,7 +35,7 @@ void pin5On() {
 
 int main (void)
 {
-    /* set pin 5 of PORTB for output*/
+    // set pin 5 of PORTB for output
     DDRB |= _BV(DDB5);
     
     int i = 0;
@@ -57,3 +57,31 @@ int main (void)
 
 ```
 
+#### Day 2 - Review C Strings, input and output 
+
+```c
+void writeString(char *str) {
+    while (*str)
+        write(0, str++, 1);
+}
+
+void copyInputToOutput() {
+    int c;
+    
+    c = getchar();
+    while (c != EOF) {
+        
+        if (c == 100) {
+            break;
+        }
+        putchar(c);
+        c = getchar();
+    }
+}
+
+```
+
+
+#### Day 3 - 
+#### Day 4 - 
+#### Day 5 - 
