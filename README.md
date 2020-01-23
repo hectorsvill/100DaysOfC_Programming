@@ -1,5 +1,6 @@
 # 100DaysOfC_Programming
- some C Programing a day keeps the doctor away 😁
+Review
+#
 #
 
 #### Day 1 - intro to embeded systems
@@ -57,6 +58,8 @@ int main (void)
 
 ```
 
+#
+
 #### Day 2 - Review C Strings, input and output 
 
 ```c
@@ -80,8 +83,20 @@ void copyInputToOutput() {
 }
 
 ```
+#### Day 3 - Review Functions, Function Dfinitions
 
+```c
+int power(int, int);
 
-#### Day 3 - 
+int power(int base, int n)
+{
+    int p = 1;
+    int i = 0;
+
+    for (i = 1; i <= n; i++)
+        p *= base;
+    return p;
+}
+```
 #### Day 4 - 
 #### Day 5 - 
