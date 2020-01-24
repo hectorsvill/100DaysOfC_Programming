@@ -83,7 +83,7 @@ void copyInputToOutput() {
 }
 
 ```
-#### Day 3 - Review Functions, Function Dfinitions
+#### Day 3 - Review Functions, Function Definitions
 
 ```c
 int power(int, int);
@@ -98,5 +98,26 @@ int power(int base, int n)
     return p;
 }
 ```
-#### Day 4 - 
+#### Day 4 - Review pointes
+```c
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    
+    *a = *b;
+    *b = temp;
+}
+
+
+```
+
+
 #### Day 5 - 
+#### Day 6- 
+#### Day 7 - 
+#### Day 8 - 
+#### Day 9 - 
+#### Day 10 - 
+#### Day 11 - 
+#### Day 12 - 
+#### Day 13 - 
