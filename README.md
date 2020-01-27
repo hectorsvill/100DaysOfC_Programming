@@ -110,7 +110,24 @@ void swap(int *a, int *b)
 
 
 ```
-#### Day 5 - 
+#### Day 5 - Reverse a String
+```c
+char* reverseString(char *str, int length)
+{
+    char* reverseStr = (char*)malloc(length + 1);
+
+    for (int i = 0; i < length; i++) {
+        reverseStr[i] = str[length - 1 - i];
+    }
+    
+    reverseStr[length] = 0;
+
+    return reverseStr;
+}
+
+```
+
+
 #### Day 6- 
 #### Day 7 - 
 #### Day 8 - 
